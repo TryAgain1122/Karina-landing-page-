@@ -74,7 +74,7 @@ const Navbar = ({scrolled, activeSection, scrollToSection}: navbarProps) => {
             <div className='absolute bottom-0 left-0 right-0 h-0.5 bg-pink-100'>
                 <div 
                     className='h-full bg-gradient-to-r from-pink-400 to-purple-400 transition-all duration-150'
-                    style={{ width: `${(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100}`}}
+                    style={{ width: `${(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100}%`}}
                 >
 
                     </div>

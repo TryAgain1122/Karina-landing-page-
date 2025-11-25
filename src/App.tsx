@@ -4,6 +4,11 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Achievements from "./components/Achievements";
 import Discography from "./components/Discography";
+import Performances from "./components/Performances";
+import Gallery from "./components/Gallery";
+import Stats from "./components/Stats";
+import Social from "./components/Social";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -17,7 +22,7 @@ const App = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ['home', 'about', 'achievements', 'discography', 'gallery', 'stats', 'social'];
+      const sections = ['home', 'about', 'achievements', 'discography','performances', 'gallery', 'stats', 'social'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -27,6 +32,16 @@ const App = () => {
         return false;
       });
       if (current) setActiveSection(current);
+
+      const elements = document.querySelectorAll('.scroll-animate');
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight * 0.85 && rect.bottom > 0;
+
+        if (isVisible) {
+          element.classList.add('scroll-visible');
+        }
+      })
     };
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -35,6 +50,8 @@ const App = () => {
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('mousemove', handleMouseMove);
+
+    handleScroll();
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('mousemove', handleMouseMove);
@@ -89,11 +106,11 @@ const App = () => {
       <About />
       <Achievements hoverCard={hoverCard} setHoverCard={setHoverCard}/>
       <Discography />
-      {/* <Performances /> */}
-      {/* <Gallery /> */}
-      {/* <Stats /> */}
-      {/* <Social /> */}
-      {/* <Footer /> */}
+      <Performances />
+      <Gallery hoverCard={hoverCard} setHoverCard={setHoverCard} scrollToSection={scrollToSection}/>
+      <Stats />
+      <Social />
+      <Footer />
     </div>
   )
 }

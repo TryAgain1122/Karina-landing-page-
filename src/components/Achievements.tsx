@@ -14,7 +14,7 @@ const Achievements = ({ hoverCard, setHoverCard }: AchievementsProps) => {
   return (
     <section id="achievements" className="relative py-32 px-4 z-10">
         <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 scroll-animate">
                 <h2 className="py-2 text-5xl md:text-6xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
                     Achievements & Recognition
                 </h2>
@@ -27,7 +27,7 @@ const Achievements = ({ hoverCard, setHoverCard }: AchievementsProps) => {
                     return (
                         <div
                             key={index}
-                            className="group relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border-2 border-pink-200 hover:border-pink-300 transition-all duration-500 hover:translate-y-4 hover:shadow-pink-200/50 cursor-pointer"
+                            className="scroll-animate group relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border-2 border-pink-200 hover:border-pink-300 transition-all duration-500 hover:translate-y-4 hover:shadow-pink-200/50 cursor-pointer"
                             onMouseEnter={() => setHoverCard(index)}
                             onMouseLeave={() => setHoverCard(null)}
                         >

@@ -19,7 +19,7 @@ const About = () => {
   return (
     <section id="about" className="relative py-32 px-4 z-10">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 scroll-animate">
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
             Meet Karina
           </h2>
@@ -29,7 +29,7 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative group">
+          <div className="relative group scroll-animate">
             <div className="absolute -inset-4 bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
             <div className="relative h-[758px] rounded-3xl overflow-hidden shadow-2xl shadow-pink-200/50">
               <div className="absolute inset-0 bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300"></div>
@@ -53,9 +53,9 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-8 scroll-animate">
             <div className="space-y-6">
-              <div className="flex items-start gap-4 cursor-pointer">
+              <div className="flex items-start gap-4 cursor-pointer scroll-animate">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-pink-200 flex items-center justify-center group-hover:scale-11 transition-transform">
                   <Star className="w-6 h-6 text-pink-500" />
                 </div>
@@ -85,7 +85,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 group cursor-pointer">
+              <div className="flex items-start gap-4 group cursor-pointer scroll-animate">
                 <div
                   className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-blue-200 to-cyan-200
                  flex items-center justify-center"
@@ -103,12 +103,12 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 group cursor-pointer">
+              <div className="flex items-start gap-4 group cursor-pointer scroll-animate">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-cyan-200 to-teal-200 flex items-center justify-center">
                   <Zap className="w-6 h-6 text-cyan-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 scroll-animate">
                     KWANGYA Universe
                   </h3>
                   <p className="text-gray-600">
