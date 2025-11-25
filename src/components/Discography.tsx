@@ -162,7 +162,7 @@ const Discography = () => {
 
                   {/* Play Button */}
                   <div
-                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500"
+                    className="absolute inset-0 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500"
                     onClick={(e) => {
                       e.stopPropagation();
                       playPreview(album.preview);

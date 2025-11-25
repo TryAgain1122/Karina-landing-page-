@@ -1,4 +1,5 @@
-import { Sparkles, Play, ArrowRight, Star, Trophy } from "lucide-react";
+import { Sparkles, Play, ArrowRight, Star, Trophy, X } from "lucide-react";
+import { useState } from "react";
 
 interface HeroProps {
   currentSlide: number;
@@ -6,6 +7,8 @@ interface HeroProps {
 }
 
 const HeroSection = ({ currentSlide, scrollToSection }: HeroProps) => {
+  const [openMv, setOpenMv] = useState(false);
+
   const heroSlides = [
     {
       gradient: "from-pink-300 via-purple-300 to-blue-300",
@@ -22,6 +25,34 @@ const HeroSection = ({ currentSlide, scrollToSection }: HeroProps) => {
   ];
   return (
     <>
+    {/* MV MODAL */}
+    {openMv && (
+      <div className="fixed inset-0 z-[999] bg-black/70 backdrop-blur-md flex items-center justify-center animate-fade-in2"
+      onClick={() => setOpenMv(false)}
+      >
+        <div className="relative w-full max-w-3xl aspect-video rounded-2xl overflow-hidden shadow-2xl border border-pink-200/40"      
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          boxShadow: '0 0 30px rgba(255, 149, 255, 0.4)'
+        }}
+        >
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/bMt6vYwUuaE?autoplay=1"
+            allow="autoplay; encrypted-media"
+          ></iframe>
+          <button
+            onClick={() => setOpenMv(false)}
+            className="absolute top-3 right-3 bg-white/80 hover:bg-white text-gray-700 rounded-full p-2 shadow-lg transition-all hover:scale-110 hover:shadow-pink-300"
+          >
+            <X className="w-5 h-5"/>
+          </button>
+
+          {/* Glow Border */}
+          <div className="absolute inset-0 rounded-2xl pointer-events-none animate-pulse-slow bg-gradient-to-r from-pink-300/20 via-purple-300/20 to-blue-300/20"></div>
+        </div>
+      </div>
+    )}
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
@@ -76,6 +107,7 @@ const HeroSection = ({ currentSlide, scrollToSection }: HeroProps) => {
             <button
               className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full font-semibold hover:shadow-xl
              hover:shadow-pink-300/50 transition-all duration-300 hover:scale-105 cursor-pointer group"
+             onClick={() => setOpenMv(true)}
             >
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Watch MV
