@@ -59,6 +59,15 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+
+      <div className="pt-8 border-pink-200 text-center">
+        <p className="text-gray-600 mb-2">
+          © 2024 • SM Entertainment • aespa • KWANGYA
+        </p>
+        <p className="text-sm text-pink-400">
+          Made with <Heart className="w-4 h-4 inline fill-pink-400"/> by Rafhael Luis
+        </p>
+      </div>
     </footer>
   )
 }

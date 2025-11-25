@@ -13,18 +13,21 @@ const Social = () => {
       icon: Instagram,
       handle: "@katarinabluu",
       color: "from-pink-300 to-purple-300",
+      link: 'https://www.instagram.com/katarinabluu/'
     },
     {
       name: "Twitter",
       icon: Twitter,
       handle: "@aespa_official",
       color: "from-blue-300 to-cyan-300",
+      link: 'https://x.com/aespa_official?lang=en'
     },
     {
       name: "YouTube",
       icon: Youtube,
       handle: "aespa",
       color: "from-red-300 to-pink-300",
+      link: "https://www.youtube.com/@aespa"
     },
   ];
   return (
@@ -63,7 +66,9 @@ const Social = () => {
                     {social.handle}
                   </p>
 
-                  <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 hover:scale-105">
+                  <button 
+                  onClick={() => window.open(social.link, '_blank')}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full font-semibold md:opacity-0 opacity-100 md:group-hover:opacity-100 transition-all duration-500 hover:scale-105">
                     Follow
                     <ExternalLink className="w-4 h-4" />
                   </button>
@@ -90,7 +95,8 @@ const Social = () => {
               placeholder="Enter your email"
               className="flex-1 px-6 py-4 rounded-full border-2 border-pink-200 focus:border-pink-400 focus:outline-none bg-white/80 backdrop-blur-sm"
             />
-            <button className="px-8 py-4 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full font-semibold hover:shadow-xl hover:shadow-pink-300/50 transition-all duration-300 hover:scale-105 whitespace-nowrap">
+            <button 
+              className="px-8 py-4 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full font-semibold hover:shadow-xl hover:shadow-pink-300/50 transition-all duration-300 hover:scale-105 whitespace-nowrap">
               Subscribe
             </button>
           </div>
