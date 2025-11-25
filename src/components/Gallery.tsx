@@ -15,7 +15,7 @@ interface GalleryProps {
   scrollToSection: (sectionId: string) => void;
 }
 
-const Gallery = ({ hoverCard, setHoverCard, scrollToSection }: GalleryProps) => {
+const Gallery = ({setHoverCard }: GalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
   const gallery: GalleryItem[] = [

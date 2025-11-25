@@ -2,7 +2,6 @@ import {
   Calendar,
   Crown,
   Music2,
-  Sparkles,
   Star,
   TrendingUp,
   Trophy,

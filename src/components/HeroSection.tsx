@@ -6,7 +6,7 @@ interface HeroProps {
   scrollToSection: (sectionId: string) => void;
 }
 
-const HeroSection = ({ currentSlide, scrollToSection }: HeroProps) => {
+const HeroSection = ({ currentSlide }: HeroProps) => {
   const [openMv, setOpenMv] = useState(false);
 
   const heroSlides = [

@@ -4,7 +4,7 @@ interface AchievementsProps {
     hoverCard: number | null;
     setHoverCard: (value: number | null) => void;
 }
-const Achievements = ({ hoverCard, setHoverCard }: AchievementsProps) => {
+const Achievements = ({  setHoverCard }: AchievementsProps) => {
       const achievements = [
     { icon: Award, title: 'Leader of aespa', desc: 'Leading 4th Gen Revolution', color: 'from-pink-300 to-rose-400' },
     { icon: Crown, title: 'It Girl Status', desc: 'Fashion & Beauty Icon', color: 'from-purple-300 to-violet-400' },
@@ -25,9 +25,10 @@ const Achievements = ({ hoverCard, setHoverCard }: AchievementsProps) => {
                 {achievements.map((item, index) => {
                     const Icon = item.icon;
                     return (
+                        <div className="scroll-animate">    
                         <div
                             key={index}
-                            className="scroll-animate group relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border-2 border-pink-200 hover:border-pink-300 transition-all duration-500 hover:translate-y-4 hover:shadow-pink-200/50 cursor-pointer"
+                            className="group relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border-2 border-pink-200 hover:border-pink-300 transition-all duration-500 hover:translate-y-4 hover:shadow-pink-200/50 cursor-pointer"
                             onMouseEnter={() => setHoverCard(index)}
                             onMouseLeave={() => setHoverCard(null)}
                         >
@@ -50,6 +51,7 @@ const Achievements = ({ hoverCard, setHoverCard }: AchievementsProps) => {
                             <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <Sparkles className="w-5 h-5 text-pink-400" />
                             </div>
+                        </div>
                         </div>
                     )
                 })}

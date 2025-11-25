@@ -1,6 +1,5 @@
 import {
   Sparkles,
-  Music2,
   Heart,
   Menu,
 } from "lucide-react";
